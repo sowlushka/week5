@@ -1,6 +1,60 @@
+/*
+Все border оставлены для демонстрации разметки 
+с помощью flexbox
+*/
+
 .flex-wrapper {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
     border: 1px solid blue;
+    justify-content: space-between;
+}
 
+h1 {
+    text-align: center;
+}
+
+.content {
+    display: inherit;
+    flex-direction: row;
+    flex-grow: 1;
+    border: 1px solid blueviolet;
+    justify-content: flex-end;
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px;
+    margin: 5px;
+}
+
+aside {
+    min-width: 20%;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+footer {
+    display: inherit;
+    justify-content: space-evenly;
+    align-items: stretch;
+    min-height: 80px;
+}
+
+footer div {
+    padding: 2px;
+    margin: 10px;
+    text-align: center;
+    flex: 1;
+    /**/
+}
+
+/*cтили закомментить в реальном проекте*/
+footer,
+main,
+aside,
+footer div {
+    border: 1px solid black;
 }
