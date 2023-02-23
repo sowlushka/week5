@@ -33,7 +33,7 @@ a {
     background-color: rgb(247, 239, 229);
     border: 1px solid blue;
     border-radius: 10px;
-    padding: 15px 10px;
+    padding: 5px 10px;
     margin: 15px;
     color: darkgreen;
     text-decoration: none;
@@ -49,21 +49,36 @@ a:active {
     background-color: rgb(252, 243, 232);
 }
 
-/*
+
 .game-preview {
     display: none;
 }
-*/
+
+.game-preview img {
+    max-width: 100%;
+    max-height: 45vh;
+}
+
 .game:hover~.game-preview {
-    display: block !important;
+    display: block;
 }
 
 main {
+    min-height: 50vh;
     padding: 5px;
     margin: 5px;
     flex-grow: 1;
 }
 
 footer {
-    padding: 20px;
+    padding: 10px;
+}
+
+
+/*---------------------------------------------------------
+Доп. стили для froggy.html
+-----------------------------------------------------------*/
+figure img {
+    width: 100%;
+
 }
