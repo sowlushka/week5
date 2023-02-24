@@ -9,8 +9,10 @@
     через transform-origin или через margin: auto 
     для узких экранов работает плохо*/
     --iframe-width: 960px;
+    --figma-width: 1300px;
     /*Масштаб iframe*/
     --scale: 0.6;
+    --figma-scale: 0.4;
 }
 
 .screen {
@@ -62,7 +64,10 @@ a:active {
 }
 
 
-.game-preview {
+/*По умолчанию все блоки невидимы*/
+.game-preview,
+.flex-site,
+.figma {
     display: none;
 }
 
@@ -73,21 +78,31 @@ a:active {
 }
 
 
-iframe {
-    display: none;
+.flex-site {
     border: 1px solid rgb(128, 111, 89);
-    width: 960px;
+    width: var(--iframe-width);
     height: 540px;
     transform: scale(var(--scale));
     transform-origin: 0 0;
     margin-left: calc(50% - var(--iframe-width) / 2 * var(--scale));
 }
 
-.game:hover~.game-preview,
-.flexsite_link:hover~iframe {
-    display: block;
+.figma iframe {
+    border: 1px solid rgb(128, 111, 89);
+    width: var(--figma-width);
+    height: 1400px;
+    transform: scale(var(--figma-scale));
+    transform-origin: 0 0;
+    margin-left: calc(50% - var(--figma-width) / 2 * var(--figma-scale));
 }
 
+
+
+.game:hover~.game-preview,
+.flexsite_link:hover~iframe,
+.figma_link:hover~.figma {
+    display: block;
+}
 
 
 main {
@@ -111,6 +126,20 @@ footer::first-letter {
 /*---------------------------------------------------------
 Доп. стили для froggy.html
 -----------------------------------------------------------*/
+figure {
+    margin-top: 5px;
+}
+
 figure img {
     width: 100%;
+}
+
+
+
+.usual_link {
+    border: none;
+    background-color: rgb(243, 242, 241) !important;
+    text-decoration: underline;
+    padding: 0px;
+    margin: 0px;
 }

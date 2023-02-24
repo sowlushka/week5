@@ -1,0 +1,167 @@
+/*Подключаем шрифт от Google Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+:root {
+    /*Задаю константу цвета. Используется для заголовка h1, 
+цвета фона меню и цвета рамки вокруг неактивной ссылки (невидима)*/
+    --main-color: #003395;
+}
+
+
+
+.desktop {
+    display: block;
+    max-width: 1440px;
+    margin: 0px auto 0px auto;
+    background: #FFFFFF;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /*border: 1px solid red;*/
+
+}
+
+article h2,
+.ban-element h2 {
+    /*Родительский класс заголовочных шрифтов*/
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+}
+
+header {
+
+    height: 372px;
+    background: url("sky.jpg") round;
+    border: 0px solid;
+}
+
+.header-regular-text {
+    max-width: 899px;
+    margin: 0px 0px 0px 145px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #000000;
+}
+
+h1 {
+    max-width: 754px;
+    margin: 0px 0px 27px 145px;
+    padding-top: 120px;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 63px;
+    color: var(--main-color);
+}
+
+nav {
+    /*Красим рамку вокруг неактивной ссылки цветом фона
+    Если рамку не прописать, её появление заставит прыгать габариты панели меню*/
+    background-color: var(--main-color);
+    padding-left: calc(149px - 31px);
+}
+
+nav a {
+    display: inline-block;
+    color: #FFFFFF;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    margin: 27px 31px 26px 31px;
+}
+
+nav a:hover {
+    border: 1px solid #c1c1c1;
+
+}
+
+nav a:active {
+    border: 1px solid #c08080;
+    /*Разобраться. цвет шрифта, в отличие от рамки,
+     в этом месте при нажатии на посещённую ссылку
+     почему-то без !important остаётся #c1c1c1 */
+    color: #c08080 !important;
+    ;
+}
+
+nav a:visited {
+    color: #c1c1c1;
+}
+
+.content {
+    display: flex;
+}
+
+main {
+    display: inline-block;
+    /* border: 1px solid green;*/
+    margin: 36px 30px 45px 147px;
+    max-width: 754px;
+}
+
+article {
+    display: block;
+    /*border: 1px solid rgb(128, 58, 0);*/
+    margin: 17px 0px 17px 0px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+article h2 {
+    color: var(--main-color);
+    padding: 13px 0px 15px 0px;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    ;
+}
+
+.banners {
+    display: inline-block;
+    max-width: 365px;
+}
+
+.ban-element {
+    color: #30233D;
+    font-size: 16.2px;
+    line-height: 163.35%;
+    margin: 56px 0px 56px 0px;
+    padding: 0px 19px 25px 19px;
+    border: 2px #33008d solid;
+}
+
+.ban-element h2 {
+    color: #FFFFFF;
+    padding: 14px 17px;
+    margin: 0px 0px 14px 0px;
+    background-color: #24B0FF;
+}
+
+/*
+Так как цвета линков в макете Figma для посещенной/непосещенной ссылки
+не прописаны, а указан только цвет для неопределённого состояния ссылки
+непосещенную ссылку оформляю синим цветом (стандарт) с оттенком основного цвета макета
+посещённую ссылку оформляю цветом, указанным в макете Figma
+*/
+.ban-element a:link {
+    text-decoration: underline;
+    display: block;
+    color: var(--main-color);
+}
+
+
+footer {
+    display: block;
+    border: 1px solid rgb(222, 43, 228);
+    background: linear-gradient(180deg, #003395 0%, #00205F 100%);
+    font-size: 11.7px;
+    line-height: 19px;
+    text-align: right;
+    color: #FCFCFC;
+    padding: 45px 147px 83px 0px;
+}
