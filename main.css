@@ -2,6 +2,17 @@
     border: 1px solid blue;
 }*/
 
+:root {
+    /*Ширина фрейма. Константа необходима для выравнивания фрейма
+    по центру при изменении ширины экрана.
+    Классическое выравнивание после transform: scale 
+    через transform-origin или через margin: auto 
+    для узких экранов работает плохо*/
+    --iframe-width: 960px;
+    /*Масштаб iframe*/
+    --scale: 0.6;
+}
+
 .screen {
     display: flex;
     flex-direction: column;
@@ -24,6 +35,7 @@ header {
 h1 {
     text-align: center;
     color: darkblue;
+    margin: 10px;
     font-size: 50px;
 }
 
@@ -54,14 +66,29 @@ a:active {
     display: none;
 }
 
+
 .game-preview img {
     max-width: 100%;
     max-height: 45vh;
 }
 
-.game:hover~.game-preview {
+
+iframe {
+    display: none;
+    border: 1px solid rgb(128, 111, 89);
+    width: 960px;
+    height: 540px;
+    transform: scale(var(--scale));
+    transform-origin: 0 0;
+    margin-left: calc(50% - var(--iframe-width) / 2 * var(--scale));
+}
+
+.game:hover~.game-preview,
+.flexsite_link:hover~iframe {
     display: block;
 }
+
+
 
 main {
     min-height: 50vh;
@@ -74,11 +101,16 @@ footer {
     padding: 10px;
 }
 
+footer::first-letter {
+    color: rosybrown;
+    font-size: 30px;
+    font-weight: 900;
+}
+
 
 /*---------------------------------------------------------
 Доп. стили для froggy.html
 -----------------------------------------------------------*/
 figure img {
     width: 100%;
-
 }

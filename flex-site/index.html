@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Важно!!!
+    main.css подключать после normalize.css
+    иначе normalize переопределит <main> на display:block
+    -->
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
-    <title>Шаблон флекс-сайта</title>
+    <title>Flexbox_N</title>
 </head>
 
 <body>
-    <div class="flex-wrapper">
+    <div class="flex-container">
         <header>
-            <h1>Шапка страницы</h1>
+            Шапка страницы
         </header>
-        <!--обертка для семантических блоков-->
-        <div class="content">
+        <div class="osnovnoy">
             <main>
-                Основная часть
+                <article>Основная часть</article>
+                <div class="ischo">
+                    <div>Ещё 1</div>
+                    <div>Ещё 2</div>
+                    <div id="ischo3">Ещё 3</div>
+                </div>
             </main>
             <aside>
                 Боковая часть
@@ -25,15 +34,14 @@
 
         </div>
         <footer>
-            <!--Текст внутри секций лень центрировать по высоте,
-            так он несёт только смысл назначения разметки
-        способы центрирования можно взять здесь
-    https://ruseller.com/lessons.php?id=1248-->
             <div>Секция футера 1</div>
             <div>Секция футера 2</div>
             <div>Секция футера 3</div>
             <div>Секция футера 4</div>
         </footer>
+
+
+
     </div>
 </body>
 
