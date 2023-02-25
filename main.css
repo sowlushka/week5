@@ -12,7 +12,7 @@
     --figma-width: 1300px;
     /*Масштаб iframe*/
     --scale: 0.6;
-    --figma-scale: 0.4;
+    --figma-scale: 0.35;
 }
 
 .screen {
@@ -81,19 +81,21 @@ a:active {
 .flex-site {
     border: 1px solid rgb(128, 111, 89);
     width: var(--iframe-width);
-    height: 540px;
+    height: 720px;
     transform: scale(var(--scale));
     transform-origin: 0 0;
     margin-left: calc(50% - var(--iframe-width) / 2 * var(--scale));
+    overflow: hidden;
 }
 
 .figma iframe {
     border: 1px solid rgb(128, 111, 89);
     width: var(--figma-width);
-    height: 1400px;
+    height: 1445px;
     transform: scale(var(--figma-scale));
     transform-origin: 0 0;
     margin-left: calc(50% - var(--figma-width) / 2 * var(--figma-scale));
+    overflow: hidden;
 }
 
 
